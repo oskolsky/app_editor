@@ -1,0 +1,123 @@
+@if $grid == "responsive" {
+  @include mq(phone)  {body {padding-top: 0 !important;}}
+  @include mq(tablet) {body {padding-top: 0 !important;}}
+}
+
+
+
+//****************************************************************************************************
+//
+// .. HEADER
+//
+//****************************************************************************************************
+.header {
+  
+}
+@include mq(desktop) {
+  .header__sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: $base-bg;
+    box-shadow: .1em .1em .3em rgba(0,0,0,.25);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. Editor container
+//
+//****************************************************************************************************
+.ui-editor {
+  padding: 4rem 0;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. Section
+//
+//****************************************************************************************************
+//
+// .. Section
+//
+.ui-editor-section {
+  line-height: 10rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: .2rem dashed $minor-color;
+  &:hover {
+    border-color: $muted-color;
+    .ui-editor-tool-bar > li > a {color: $muted-color;}
+  }
+}
+
+//
+// .. Add section
+//
+.ui-editor-add-section {
+  line-height: 4rem;
+  display: block;
+  height: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: $minor-color;
+}
+
+//
+// .. Tool bar
+//
+.ui-editor-tool-bar {
+  text-align: center;
+}
+  .ui-editor-tool-bar_i {
+    line-height: 100%;
+    display: inline-block;
+
+    > a {
+      color: $minor-color;
+      &:hover {color: $base-color !important;}
+    }
+
+    .ui-editor-tool-bar__large & {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      > a > .fa {
+        font-size: 2.5rem;
+      }
+    }
+    .ui-editor-tool-bar__medium & {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+      > a > .fa {
+        font-size: 2rem;
+      }
+    }
+    .ui-editor-tool-bar__small & {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      > a > .fa {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. FOOTER
+//
+//****************************************************************************************************
+.footer {
+
+}
