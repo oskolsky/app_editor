@@ -1,0 +1,21 @@
+<div class="custom-file-uploader-container">
+  <div class="row">
+    <div class="span3">
+      <label>Название</label>
+      <input type="text" class="span3" title="Название документа" value="<%%= content.name %>" data-name="name">
+    </div>
+
+    <div class="span6">
+      <label>Загрузить</label>
+      <div class="alert alert-info">
+        <p data-name="label" style="margin-bottom: 10px;">Файл</p>
+        <div class="custom-file" style="cursor: pointer; height: 31px; overflow: hidden; position: relative; width: 140px;">
+          <div class="btn btn-primary" style="position: absolute; left: 0; right: 0;">
+            Загрузить<img data-loader='true' src="/assets/loading_btn-primary.gif" width="16" height="16" alt="Loading..." style="margin: -2px 0 0 6px; display:none;">
+          </div>
+          <input class="span5" name="file" style="font-size: 100px; opacity: 0; position: absolute;" type="file">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

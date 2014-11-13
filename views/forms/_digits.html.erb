@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="span4">
+    <div class="form-row">
+      <label>Значение</label>
+      <input type="text" class="span4" value="<%%= content.value %>" data-name="value">
+    </div>
+    <div class="form-row">
+      <label>Заголовок</label>
+      <input type="text" class="span4" value="<%%= content.title %>" data-name="title">
+    </div>
+    <div class="form-row">
+      <label>Источник</label>
+      <input type="text" class="span4" value="<%%= content.source %>" data-name="source">
+    </div>
+    <!--<div class="form-row">-->
+      <!--<label>Дата</label>-->
+      <!--<select data-name="month" class="span2">-->
+        <!--<option value="1">Январь</option>-->
+        <!--<option value="2">Февраль</option>-->
+        <!--<option value="3">Март</option>-->
+        <!--<option value="4">Апрель</option>-->
+        <!--<option value="5">Май</option>-->
+        <!--<option value="6">Июнь</option>-->
+        <!--<option value="7">Июль</option>-->
+        <!--<option value="8">Август</option>-->
+        <!--<option value="9">Сентябрь</option>-->
+        <!--<option value="10">Октябрь</option>-->
+        <!--<option value="11">Ноябрь</option>-->
+        <!--<option value="12">Декабрь</option>-->
+      <!--</select>-->
+
+      <!--<select data-name="year" class="span2">-->
+        <!--<% Time.now.year.downto(Time.now.year - 4) do |year| %>-->
+            <!--<option value="<%= year %>"><%= year %></option>-->
+        <!--<% end %>-->
+      <!--</select>-->
+
+    <!--</div>-->
+  </div>
+  <div class="span5">
+    <label>Анонс</label>
+    <textarea rows="9" class="span5" data-name="description"><%%= content.description %></textarea>
+  </div>
+</div>

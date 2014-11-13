@@ -1,0 +1,8 @@
+window.JST['model/model_editor'] = _.template("<%= j(render 'admin/materials/v2/article_model_editor') %>");
+window.JST['model/section'] = _.template("<li class='maker_element'><div class='ico-48 ico-48__section' title='<%= I18n.t('toolbar.items.section') %>'></div></li>");
+<% %w{header text quote fact interview expert table image video attach gallery infographic digits}.each do |type| %>
+window.JST['model/<%= type %>'] = _.template("<%= j(render 'admin/article_models/item', type: type) %>");
+<% end  %>
+
+
+

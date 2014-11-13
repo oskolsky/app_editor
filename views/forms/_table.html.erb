@@ -1,0 +1,26 @@
+<div data-role="table-info">
+  <div class="table-title">
+    <label>Заголовок</label>
+    <input type="text" class="span3" data-name="header" value="<%%= content.header %>"
+  </div>
+</div>
+
+<ul class="columns-manager">
+  <%% _.each(content.columns, function(col) { %>
+    <%%= JST['table_col_cell']({col: col}) %>
+  <%% }); %>
+</ul>
+<ul class="table-content">
+  <%% _.each(content.rows, function(row) { %>
+      <%%= JST['table_item']({content: {columns: content.columns, row: row}}) %>
+  <%% }); %>
+</ul>
+
+<ul class="row-content input-append">
+  <%% _.each(content.columns, function(col) { %>
+    <%%= JST['table_add_cell']({col: col}) %>
+  <%% }); %>
+  <li>
+    <a href="#" class="btn btn-success" data-action="add" title="Добавить строку"><i class="icon-plus icon-white"></i></a>
+  </li>
+</ul>

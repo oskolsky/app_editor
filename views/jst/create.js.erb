@@ -1,0 +1,18 @@
+<% unless @material.errors.any? %>
+    $('#article-form').attr('action', '<%= send("admin_#{controller.material_class.to_s.underscore}_path", @material) %>');
+    $('#article-form').attr('method', 'put');
+    <% if @material.announce_image %>
+        $('#announce_image img').attr('src', '<%= @material.announce_image_url(:v260x190) %>');
+        $('input[name="<%= controller.material_class.to_s.underscore %>[announce_image_cache]"]').removeAttr('value');
+    <% end %>
+<% end %>
+
+$.bootstrapGrowl('<%= generate_message_html(@material) || 'Изменения сохранены' %>', {
+    type: '<%= @material.errors.any? ? 'error' : 'success' %>',
+    offset: {from: 'top', amount: 45},
+    align: 'right',
+    width: 500,
+    allow_dismiss: false
+});
+
+$('a[data-action="save"]').removeAttr('disabled');

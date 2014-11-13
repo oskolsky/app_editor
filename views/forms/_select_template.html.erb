@@ -1,0 +1,24 @@
+<p>Выберите шаблон из списка или создайте новый!</p>
+<div class="row">
+
+    <div class="span6">
+      <table class="table table-striped">
+        <thead>
+        </thead>
+
+        <tbody>
+            <%% _.each(templates, function(t) { %>
+            <tr class="template_selector" data-template-id="<%%= t.id %>"><td><%%= _.escape(t.name) %></td></tr>
+            <%% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="span3 details_area">
+        <div data-rel="actions" style="display: none;">
+            <button class="btn" data-action="select">Использовать</button>
+            <button class="btn" data-action="edit">Редактировать</button>
+        </div>
+        <div data-rel="preview"></div>
+    </div>
+</div>
