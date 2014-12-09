@@ -1,9 +1,0 @@
-<div class="image-gallery row">
-<%% _.each(content.images, function(image, idx) { %>
-  <div class="image-gallery-item span3" data-image-idx="<%%= idx %>">
-    <%%= JST['watermarked_image_uploader']() %>
-    <label>Описание</label>
-    <input type="text" title="Описание" value="<%%= image.description %>" data-name="description" class="span3"/>
-  </div>
-<%% }); %>
-</div>
