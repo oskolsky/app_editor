@@ -1,0 +1,53 @@
+%aside.ui-sidebar
+  %nav.ui-toolbar{role: "navigation"}
+
+    %div#columns.ui-toolbar_group
+
+      %p.ui-toolbar_group_t Columns
+
+      %div.ui-block{data: {columns: "1"}}
+        %i.ico.ico__48.ico__columns
+        %span 1 Column
+
+      %div.ui-block{data: {columns: "2"}}
+        %i.ico.ico__48.ico__columns
+        %span 2 Columns
+
+      %div.ui-block{data: {columns: "3"}}
+        %i.ico.ico__48.ico__columns
+        %span 3 Columns
+
+      %div.ui-block{data: {columns: "4"}}
+        %i.ico.ico__48.ico__columns
+        %span 4 Columns
+
+    %div#blocks.ui-toolbar_group
+
+      %p.ui-toolbar_group_t Elements
+
+      %div.ui-block.ui-block__disable{data: {block: "heading"}}
+        %i.ico.ico__48.ico__heading
+        %span Heading
+
+      %div.ui-block.ui-block__disable{data: {block: "text"}}
+        %i.ico.ico__48.ico__text
+        %span Text
+
+      %div.ui-block.ui-block__disable{data: {block: "blockquote"}}
+        %i.ico.ico__48.ico__blockquote
+        %span Quote
+
+      %div.ui-block.ui-block__disable{data: {block: "image"}}
+        %i.ico.ico__48.ico__image
+        %span Images
+
+      / %div.ui-block.ui-block__disable{data: {block: "images"}}
+      /   %i.ico.ico__48.ico__images
+      /   %span Галерея
+
+      %div.ui-block.ui-block__disable{data: {block: "video"}}
+        %i.ico.ico__48.ico__video
+        %span Video
+
+  .ui-sidebar__toggle
+    %i.fa.fa-bars

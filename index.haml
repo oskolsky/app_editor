@@ -1,0 +1,24 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title New page / Content Builder
+    = Haml::Engine.new(File.read("views/layouts/_head.haml")).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read("views/common/_alerts.haml")).render
+    = Haml::Engine.new(File.read("views/layouts/_header.haml")).render
+    
+    %main#main.main{role: "main"}
+
+      = Haml::Engine.new(File.read("views/layouts/_sidebar.haml")).render
+
+      .ctn
+        .pt-6.pb-6
+          %section{role: "region", aria: {label: "New page"}}
+            %h4.mb-3 Use the editing area to make edits to your page.
+            #editable.ui-content
+
+    = Haml::Engine.new(File.read("views/common/_columns.haml")).render
+    = Haml::Engine.new(File.read("views/common/_blocks.haml")).render
+
+    = Haml::Engine.new(File.read("views/layouts/_footer.haml")).render

@@ -1,0 +1,21 @@
+%script#block-heading{type: "text/html"}
+  %div.cnt{data: {save: "heading"}}
+    %h4 Heading
+
+%script#block-text{type: "text/html"}
+  %div.cnt{data: {save: "text"}}
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius libero eu tristique porta.
+
+%script#block-blockquote{type: "text/html"}
+  %div.cnt
+    %blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc varius libero eu tristique porta.
+
+%script#block-image{type: "text/html"}
+  %div.cnt
+    %figure
+      %img{src: "/assets/images/photo.jpg", width: "100%", style: "background-color: #eee;", alt: "Images caption"}
+      %figcaption Images caption
+
+%script#block-video{type: "text/html"}
+  %div.cnt
+    %iframe{width: "420", height: "315", src: "//www.youtube.com/embed/UtnRlZ4oSlE", frameborder: "0", allowfullscreen: "allowfullscreen"}

@@ -1,0 +1,196 @@
+@if $grid == "responsive" {
+  @include mq(phone)  {body {padding-top: 0 !important;}}
+  @include mq(tablet) {body {padding-top: 0 !important;}}
+}
+
+
+
+//****************************************************************************************************
+//
+// .. DEBUG
+//
+//****************************************************************************************************
+.dbg {
+  background-color: red;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. HEADER
+//
+//****************************************************************************************************
+.header {
+  
+}
+@include mq(desktop) {
+  .header__sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: $base-bg;
+    box-shadow: .1em .1em .3em rgba(0,0,0,.25);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. USER INTERFACE
+//
+//****************************************************************************************************
+//
+// .. Sidebar
+//
+.ui-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -25rem;
+  width: 25rem;
+  padding-top: 1rem;
+  border-right: .2rem solid $voice-color;
+  background-color: $muted-color;
+  @include prefixes(transition, left .33s ease);
+}
+.ui-sidebar__open {
+  left: 0;
+}
+  .ui-sidebar__toggle {
+    line-height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 3rem;
+    height: 4rem;
+    cursor: pointer;
+    text-align: center;    
+    border-radius: 0 .6rem .6rem 0;
+    border-top: .2rem solid $voice-color;
+    border-right: .2rem solid $voice-color;
+    border-bottom: .2rem solid $voice-color;
+    background-color: $muted-color;
+    @include prefixes(transform, translateY(-50%));
+    .fa {
+      opacity: .6;
+      @include prefixes(transition, opacity .33s ease);
+    }
+    &:hover {
+      .fa {opacity: 1;}
+    }
+  }
+
+//
+// .. Toolbar
+//
+.ui-toolbar {
+
+}
+  .ui-toolbar_group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }  
+  }
+  .ui-toolbar_group__columns {
+
+  }
+  .ui-toolbar_group__blocks {
+    .ui-block {
+      opacity: .1;
+    }
+  }
+    .ui-toolbar_group_t {
+      padding: 1rem;
+    }
+
+//
+// .. Content
+//
+.ui-content {
+  padding: 2rem;
+  min-height: 7rem;
+  border: .1rem dashed $voice-color;
+  @include prefixes(box-sizing, border-box); 
+}
+
+//
+// .. Item
+//
+.ui-block, .ui-block-drag {
+
+  .ui-toolbar & {
+    line-height: 6rem;
+    width: 25rem !important;
+    height: 6rem !important;
+    padding: 0 2rem;
+    cursor: pointer;
+    border-top: .1rem solid #fff;    
+    background-color: $muted-color;
+    @include prefixes(box-sizing, border-box);
+
+    &:last-child {border-bottom: .1rem solid #fff;}
+
+    &:hover {
+      background-color: $minor-color;
+    }
+
+    .ico {
+      margin-right: 1rem;
+      vertical-align: middle;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }   
+  }
+
+  .ui-content & {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+}
+.ui-block__disable {
+  opacity: .2;
+}
+
+//
+// .. Columns
+//
+.ui-columns {
+  min-height: 7rem;
+  padding: 2rem;
+  border: .1rem dashed $voice-color;
+  @include prefixes(box-sizing, border-box);
+}
+
+//
+// .. Placeholder
+//
+.ui-placeholder {
+  height: 7rem;
+  margin-bottom: .2rem;
+  border: .1rem solid #fcefa1;
+  background-color: #fcfbf2;
+  @include prefixes(box-sizing, border-box);
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. FOOTER
+//
+//****************************************************************************************************
+.footer {
+
+}

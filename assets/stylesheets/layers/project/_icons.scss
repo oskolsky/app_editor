@@ -1,0 +1,19 @@
+@include class(ico) {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+@include class(ico__48) {
+  width: 48px;
+  height: 48px;
+  background-image: image-url('ico-48.png');
+}
+
+@include class(ico__heading)     {background-position: 0 0;}
+@include class(ico__text)        {background-position: -48px 0;}
+@include class(ico__blockquote)  {background-position: -96px 0;}
+@include class(ico__table)       {background-position: -144px 0;}
+@include class(ico__image)       {background-position: -192px 0;}
+@include class(ico__images)      {background-position: -240px 0;}
+@include class(ico__video)       {background-position: -288px 0;}
+@include class(ico__columns)     {background-position: -336px 0;}
